@@ -1,0 +1,142 @@
+﻿<html>
+  <head>
+    
+    <meta charset = "utf-8">
+     <link href="https://fonts.googleapis.com/css?family=Sunflower:300,700&display=swap" rel="stylesheet">
+<title>나만의 스터디 플래너 만들기</title>
+    
+<style>
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+ /* background: radial-gradient(white, #FFA328);*/
+  background-image: url('  https://live.staticflickr.com/65535/49000661446_0391667246_h.jpg');
+  /*
+  https://live.staticflickr.com/65535/49000657526_90696dfcbb_h.jpg(에펠탑 확대)
+  https://live.staticflickr.com/65535/49000661446_0391667246_h.jpg(커피 반투명)
+  */
+  
+}
+ 
+ .container {
+ 	 text-align: center;
+   position: absolute;
+   top: 48%;
+   left: 43%;
+   transform: translate(-10%, -50%);
+ }
+  
+  #start_btn {
+  	position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    border-radius: 13px;
+	  background-color: white ;
+    color: black;
+    border: 3px solid #7F574A;
+    padding: 40px 80px;
+    font-size: 40px;
+    font-family: 'BRBA_B', sans-serif;
+  }
+  #start_btn:hover {
+    background-color: #7F574A;
+    color: white;
+    border: 3px solid white; 
+    
+  }
+  
+  p {
+    	text-align: center;
+    	font-family: 'GoyangIlsan', sans-serif; 
+    	font-size: 25; 
+    }
+  
+  @font-face { font-family: 'BRBA_B'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/BRBA_B.woff') format('woff'); font-weight: normal; font-style: normal; }
+  
+  
+  @font-face { font-family: 'SDMiSaeng'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff') format('woff'); font-weight: normal; font-style: normal; }
+  
+  @font-face { font-family: 'YiSunShinDotumM'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/YiSunShinDotumM.woff') format('woff'); font-weight: normal; font-style: normal; }
+  
+@font-face { font-family: 'GoyangIlsan'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GoyangIlsan.woff') format('woff'); font-weight: normal; font-style: normal; }
+</style>
+  </head>
+  
+  <body>
+    <header style="font-family: 'BRBA_B';font-size: 85; text-align: center; margin-top: 5%; margin-bottom: 2.5%; text-shadow: 2px 2px 2px gray;">나만의 플래너 만들기</header>
+   
+<p>이 사이트에서는 자신만의 <strong>스터디 플래너</strong>를 제작할 수 있습니다!</p>
+    
+
+ 
+<p> 아래 <b>시작하기 버튼</b>을 누르고 나만의 스터디 플래너를 제작해보세요!!</p>
+    
+    
+    <p> <b>pdf로 저장</b>시 인쇄가 가능하지만 다시 <b>수정</b>하지 못합니다!</p>
+
+<p> <b>중간 저장</b>시 다시 불러와 수정할 수 있습니다!</p>
+  
+  
+<input type = 'button' value = '시작하기' id = "start_btn" >
+
+
+
+  
+<script>
+
+  window.onload = function() {
+    const startBtn = document.querySelector("#start_btn");
+    
+    startBtn.addEventListener("click", function() {
+      var body = document.getElementsByTagName('body')[0];
+    	//$(body).animate({opacity: '0'}, {complete: d(body)}, 'slow');
+			body.outerHTML = '<h1 class = "container">Study Planner <br> Only For You</h1>'
+   		setTimeout('window.open("mainPlanner.html", "_self")', 2000);
+    });
+    
+  }
+  
+  
+</script>
+  
+    
+  </body>
+</html>
+
+<!--
+언니가 고르신거에요??
+한번 확인해볼게요!!
+
+음 잠시만여!
+언니 일단 제가 고른 안투면은 진짜 아닌것 같아요.... 혹시 언니꺼는 투명한 정도를 좀 낮출 수 있나요?? 네!
+링크 두 개 추가했어여
+
+넵!!
+
+2개를 골랐어여!! 덜투명 에펠탑 가위랑 커피는 할거면 조금 투명하면 좋을 것 같아요!!
+오키!!
+링크 새로 올렸어여 (ㅇ_ㅇ)
+음... 저도 커피도 좋고 에펠탑도 좋은뎅ㅇㅇㅇㅇ
+넵! 확인할게염!! 와 진짜 갬성ㅋㅋㅋ 에펠탐 확대도 괜찮은 것 같아요!!
+
+ㅅrㄷrㄹiㅌrㄱi ㅎrㄹㄹH?(어느 선택장애들)
+커피가 당첨되었다고 합니다..!!!! 음 저는 괜찮아요..!!
+네!
+버튼 색까지 바꿔봤는데 괜찮나여..? OㅁO!
+흐음... 저는 개인적으로 글자들이랑 버튼이 가운데에 있어야 뭔가 시선이 잘 갈거라 생각해서 버튼을 올리길 바랐던 건데 내리면 어떤 느낌이려나요..?? 내려볼까요?
+
+아 맞다 저희 중간저장 기능 있으니까 불러오기 버튼도 만들어야 하는데 그걸 시작화면에 만들까여 작업 화면에 만들까여.. 음 저도 그렇게 생각해여 그렇게 합시다!
+그리고 버튼 내린 거 어떤가여..?? 너무 아래인 것 같은....
+지금 버튼 위치 좋아여!! 그런가여? 그럼 저희 시작화면은 여기까지 하고 제작화면으로 갈까요??? 네!!
+
+그럼...음... 넼ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ 그럼 커피로 할까요? 언니는 어떠세요??? 그럼 저도 괜찮아요!! 언니 혹시 수정할때 필요할 수도 있으니까 주석으로 에펠탑 확대 이미지 주소는 놔두는게 어떨까요?? 오!! 넵!! 완전!! 언니 버튼을 조금 내리는게 어떨까요..?? 너무 붙어있는 것 같은 느낌.... 근데 내리면 너무 애매해질까요...?? 그럴까요..? 작업화면이 좋을 것 같아요! 지금은여...??
+  
+ sp!! 안녕하세여!!
+배경 뭘로 할까요!!(진지)
+위에 보면 링크가 3개인데 지윤이 고른 거 투명/안투명이랑 제가 고른 거 투명
+이케 남겨놨고
+뭘로 하징?! 네!!
+-->
+  
+

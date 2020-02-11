@@ -1,0 +1,137 @@
+/* 표와 A4지의 테두리, 바깥여백을 정함 */
+      #mainBox, #tagBox {
+        border-color: black;
+        border: solid 2px;
+      }
+
+
+
+    /*  #realmainbox{
+        display: inline-block;
+        width: 50%;
+        height: 90px
+      }*/
+
+
+
+      /* 스티커 동그랗게 만들기 */
+      .sticker {
+        border-radius: 50%;
+
+        width: 100px;
+        height: 100px;
+        border: 1.5px solid black;
+
+        float: left;
+        margin: 10px 10px 10px 0;
+     }
+
+
+      /* 드래그 가능한 객체?와 드롭 가능한 객체의 바깥여백과.. 플로트는 뭐지 */
+      .droppable { float: left; margin: 10px; }
+
+
+      /* 표와 A4지를 예쁘게 가로로 배열하는 건데... 쓸모없음 */
+      .align {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /* 웹 전체의 스타일을 정해준다고 보면 될 듯. 폰트, 배경 */
+      body {
+        font-family: 'Nanum Gothic', sans-serif;
+        background: radial-gradient(white, #7F574A);
+        height: 98%;
+      }
+
+      /* tagBox 안에 들어있는 애들의 테두리와 내부 간격 */
+      .elements:not(.sticker) {
+        border-top:1.5px solid black;
+        border-bottom:1.5px solid black;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        float: left;
+        margin: 10px 10px 10px 0;
+
+      }
+
+      tr {
+        margin: 10px 10px 10px 0;
+      }
+
+      .button {
+        display: inline-block;
+        border-radius: 10px;
+        border-color: #7F574A;
+        text-align: center;
+        transition: all 0.5s;
+        cursor: pointer;
+        background-color: #7F574A;
+        color: white;
+        padding: 5px 12px;
+        text-decoration: none;
+        font-size: 15px;
+        margin: 4px 2px;
+             }
+
+      .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+
+       .button span:after {
+         content: '\00bb';
+         position: absolute;
+         opacity: 0;
+         top: 0;
+         right: -20px;
+         transition: 0.5s;
+       }
+
+       .button:hover span {
+         padding-right: 10px;
+       }
+
+       .button:hover span:after {
+         opacity: 1;
+         right: 0;
+       }
+      
+      .plan-time {
+        width: 15%;
+        background-color: #BDBDBD;
+      }
+
+      /* 헤헷 잘한다(구경)
+      잠깐 자바스크립트 뺄게여..!  네!!*/
+
+
+      table:not(#tagBox) {
+         border-collapse: collapse;
+        border-spacing: 0;
+        margin-top: 10px;
+      }
+        /* tagBox 안에 있는 애들한테 이상한 테두리 생기길래 위아래 검은 줄 빼고 없애버림. */
+        td {
+          border-left: 0;
+          border-right: 0;
+        }
+
+        /*공부 계획, 오늘의 나 성찰 안에 들어간 표의 스타일을 정한 건데 큰 의미 없음.*/
+        #planTable > tr > td {
+          border: 1px solid black;
+        }
+
+        #reflectionTable > tr > td {
+          border: 1px solid black;
+        }
+      
+        #timeTable > tr > td {
+          border: 1px solid black;
+          text-align: right;
+        }
+
+        @font-face { font-family: 'BRBA_B'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/BRBA_B.woff') format('woff'); font-weight: normal; font-style: normal; }
+
