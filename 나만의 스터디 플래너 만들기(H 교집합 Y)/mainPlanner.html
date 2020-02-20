@@ -9,24 +9,27 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Gaegu|Nanum+Gothic|Nanum+Myeongjo|Nanum+Pen+Script|Noto+Serif+KR|Poor+Story|Yeon+Sung&display=swap" rel="stylesheet">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script> -->
+<script src = "https://rawgit.com/eKoopmans/html2canvas/develop/dist/html2canvas.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
 
-      <script src = "planner.js"></script>
-      
+
+
   </head>
   <body>
 
-    
+
     <div style = "display: flex;">
       <button class="button" id = "saveTxt"> <span>중간 저장하기 </span></button>
 <button class="button" id = "savePDF"> <span>pdf로 저장하기 </span></button>
@@ -39,10 +42,25 @@
       요소의 오른쪽 모서리를 잡아당겨 크기를 조절하세요!<br>
       요소를 삭제하기 위해서는 기능란 위로 드래그하세요!
     </header>
-    
+
     <div class="button">여백 색상 정하기&nbsp;<input type="color" value = "#B3001F" id = "colorPicker"></div>
-    
-  
+
+
+
+
+    <div class = "button">
+        글꼴 정하기
+        <select name = "fonts" onchange = "changeFont()" id = "mySelect">
+            <option value = "Nanum Gothic">나눔고딕</option>
+            <option value = "Nanum Myeongjo">나눔명조</option>
+            <option value = 'Nanum Pen Script'>나눔펜 뭐시기</option>
+            <option value = 'Noto Serif KR'>노토 세리프가 뭐임</option>
+            <option value = 'Gaegu'>개구</option>
+            <option value = 'Yeon Sung'>연성</option>
+            <option value = 'Poor Story'>불쌍한 이야기</option>
+        </select>
+    </div>
+
     <div class = "align">
     <div id = "mainBox" style = "width: 148.5mm; height: 210mm; min-width: 148.5mm; background-color: brown; display: flex; align-items: center; justify-content: center; margin: 0;">
       <div id = "realMainBox" class = "droppable_mainBox" style = "width: 125.1mm; height: 203.2mm; background-color: white; border: 2px solid black; ">
@@ -164,7 +182,7 @@
 
           <tr>
             <td class = "inTagBox elements time-table"> Time-Table <br>
-              
+
               <table border = "1" summary = "sbs" style = "flex-grow: 1; table-layout: fixed; width: 200px; height: 50px;">
                 <tbody id = "timeTable">
 
@@ -397,5 +415,6 @@
     </footer>
 
   </body>
- 
+  <script src = "planner.js"></script>
+
 </html>
